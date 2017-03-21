@@ -1,0 +1,59 @@
+@keyframes fs{
+  from{
+    border-color:#fef243;
+  }
+  to{
+    border-color:black;
+  }
+}
+body{
+  font-family:franklin gothic medium, sans-serif;
+  min-width:400px;
+}
+h1{
+  color:red;
+  text-align:center;
+}
+img{
+  display:block;
+  margin:0px auto;
+  position:relative;
+}
+#caption{
+  animation-name:fs;
+  animation-duration:.2s;
+  animation-iteration-count:infinite;
+  animation-timing-function:linear;
+  background-color:red;
+  border:5px dotted transparent;
+  border-radius:35%;
+  color:white;
+  cursor:default;
+  font-size:1.6em;
+  margin:0px auto;
+  padding:10px;
+  text-align:center;
+  text-transform:capitalize;
+  position:relative;
+  top:-150px;
+  width:250px;
+}
+#glasses{
+  height:58px;
+  left:5px;
+  top:-290px;
+  width:135px;
+  z-index:1;
+}
+#hat{
+  height:167px;
+  left:15px;
+  width:275px;
+  z-index:2;
+}
+#octopus{
+  height:288px;
+  top:-100px;
+  width:210px;
+  z-index:0;
+}
