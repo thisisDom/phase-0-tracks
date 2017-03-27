@@ -1,0 +1,64 @@
+Personal Robot Elevator
+  -Enter Elevator
+  -Wait until elevator door close
+  -Navigate to the floor with the star next to it(Main Floor)
+  -Determine how many floors are in the building
+      -move up from the main floor counting each row until there are no more buttons to the above
+      -For each row counted
+        -move to the right, counting each button until there are no more buttons to the right
+        -after, move back to the starting position and and check if there is a row above
+        -repeat until there are no more rows.
+    -Navigate back to the floor with the star 
+      -move down from the main floor counting each row until there are no more buttons to the above
+        -For each row counted
+          -move to the right, counting each button until there are no more buttons to the right
+          -after, move back to the starting position and and check if there is a row above
+          -repeat until there are no more rows.
+  -Store row count as y
+  -Store buttons in row count as x
+  -Ask What floor? Store as a
+  -Find the button position
+    Divide Floor Request Number/Number of Floors Per Row rounded down to whole number. Store as r
+    Find the Modulus of Floor Request Number(a)/Number of Floors Per Row(x). Store as m
+  Navigate to floor with the star
+  If a>x
+    If m>0
+      Move up r+1 buttons up
+      move right m-1 buttons
+      press button
+    Else
+      Move up r buttons up
+      move right x buttons
+      press button
+  Else 
+    Move right a buttons
+    press button
+
+Personal Task Get Ready for work
+  -Check time to see if minutes until work
+    -If minutes is less than 30
+      -brush teeth
+        -go to bathroom
+        -find and grab toothbrush
+        -put toothpaste on toothbrush
+        -turn on water and put toothbrush on
+        -brush teeth
+      -put on clothes and shoes
+      -grab phone wallet and keys
+      -leave for work
+    else
+      -Shower
+        -turn on shower
+        -wait until water is hot
+        -enter shower
+        -clean body
+        -rise off
+      -brush teeth
+        -go to bathroom
+        -find and grab toothbrush
+        -put toothpaste on toothbrush
+        -turn on water and put toothbrush on
+        -brush teeth
+      -put on clothes and shoes
+      -grab phone wallet and keys
+      -leave for work
