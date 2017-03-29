@@ -1,0 +1,46 @@
+*{
+  border-width:0px;
+  margin:0px;
+  padding:0px;
+}
+article{
+  background-color:#fefaec;
+  margin:10px auto;
+  padding:10px;
+}
+body{
+  font-family:sans-serif;
+}
+div.section-wrapper{
+  overflow:auto;
+}
+footer{
+  font-size:14px;
+  text-align:center;
+}
+header{
+  background-color:#db0000;
+  color:white;
+  padding:40px 10px;
+}
+h1{
+  font-family:franklin gothic;
+  text-decoration: underline
+}
+p{
+  font-size:16px;
+  padding:10px;
+}
+section{
+  box-sizing:border-box;
+  float:left;
+  padding:25px;
+  width:50%;
+}
+ul{
+  list-style-type: none;
+}
+.column-1{
+}
+.column-2{
+}
