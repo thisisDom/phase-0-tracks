@@ -1,3 +1,5 @@
+# 4.4 Solo Challenge
+# Algorithm to detect if our interview candidate is a vampire.
 puts "How many employees will be processed?"
 employees = gets.to_i
 time = Time.new
