@@ -30,3 +30,21 @@ def decrypt(word)
   end
   return word
 end
+puts "Do you want to decrypt or encrypt a password?"
+response = gets.chomp
+until response == "decrypt" || response == "encrypt"
+  puts "Sorry, I didn't get that. Did you want to decrypt or encrypt?"
+  response = gets.chomp
+end
+puts "What's the password?"
+password = gets.chomp
+until password != " " && password != ""
+  puts "Please, enter the password"
+  password = gets.chomp
+end
+if(response == "encrypt")
+  puts encrypt(password)
+end
+if(response == "decrypt")
+  puts decrypt(password)
+end
