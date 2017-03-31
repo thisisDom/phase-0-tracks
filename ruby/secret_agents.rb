@@ -11,6 +11,7 @@ def encrypt(word)
     end
     index += 1
   end
+  #Output the result
   return word
 end
 #Define decrypt method with one string parameter, the word we want to encrypt
@@ -28,6 +29,7 @@ def decrypt(word)
     end
     index += 1
   end
+  #Output the result
   return word
 end
 puts "Do you want to decrypt or encrypt a password?"
