@@ -32,10 +32,11 @@
 # => "Elementary, my dear Watson!"
 
 "z".codepoints
-# => 122 
-
+# => 122 '
+i = 2
+"fish".index(i)
 # (What is the significance of the number 122 in relation to the character z?)
   #It's the integer value for the letter z in ASCII(&#122;) and UTF-8(122)
-  
+
  "How many times does the letter 'a' appear in this string?".count("a")
 # => 4

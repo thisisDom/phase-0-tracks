@@ -1,6 +1,6 @@
-#Interior Designer Client Info
+# Program for Interior Designer Client Info
 client_info = Hash.new
-#Get client's name (string)
+# Get client's name (string)
 puts "What is your name?"
 input = gets.chomp
 until input != "" && input
@@ -8,7 +8,7 @@ until input != "" && input
   input = gets.chomp
 end
 client_info[:name] = input.capitalize
-#Get client's age (integer)
+# Get client's age (integer)
 puts "What is your age?"
 input = gets.chomp.to_i
 until input > 0
@@ -16,7 +16,7 @@ until input > 0
   input = gets.chomp.to_i
 end
 client_info[:age] = input
-#Get client's number of children (integer)
+# Get client's number of children (integer)
 puts "Do you have any children?(Enter either Yes or No?)"
 input = gets.chomp.downcase
 until input == "yes"|| input == "no"
@@ -34,7 +34,7 @@ else
   input = 0
 end
 client_info[:no_of_children] = input
-#Get client's decor theme (string)
+# Get client's decor theme (string)
 puts "What's your favorite decor theme? Put \"none\" if you don't have one."
 input = gets.chomp.downcase
 until input != ""
@@ -42,7 +42,7 @@ until input != ""
   input = gets.chomp.downcase
 end
 client_info[:favorite_decor_theme] = input.capitalize
-#Get client's favorite color (string)
+# Get client's favorite color (string)
 puts "What's your favorite color? Put \"none\" if you don't have one."
 input = gets.chomp.downcase
 until input != ""
@@ -50,7 +50,7 @@ until input != ""
   input = gets.chomp.downcase
 end
 client_info[:favorite_color] = input.capitalize
-#Find out if they live with a significant other?
+# Find out if they live with a significant other?
 puts "Do you live with a significant other?(Enter either Yes or No?)"
 input = gets.chomp.downcase
 until input == "yes"|| input == "no"
@@ -63,7 +63,7 @@ else
   input = false
 end
 client_info[:lives_with_so] = input
-#Get City of Residence?
+# Get City of Residence?
 puts "What's is your city of residence?"
 input = gets.chomp.downcase
 until input != ""
@@ -100,7 +100,7 @@ if correct_info == "no"
     puts "What would you like to change?"
     input = gets.chomp
   end
-  client_info[key] = input
+  client_info[key] = input.to_s.capitalize
 end
 puts "Here is the information we have for you"
 puts "Name: #{client_info[:name]}"
