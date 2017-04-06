@@ -29,7 +29,7 @@ def get_alias(full_name)
 
   # Map array for each name
 
-  first_name.map!.with_index { |x, i|
+  first_name.map! { |x|
   # Determine if the letter is a vowel or consonant
     new_letter = nil
     if vowels.include?(x)
@@ -51,7 +51,7 @@ def get_alias(full_name)
     end
   }
 
-  last_name.map!.with_index { |x, i|
+  last_name.map! { |x|
   # Determine if the letter is a vowel or consonant
     new_letter = nil
     if vowels.include?(x)
@@ -92,7 +92,7 @@ new_alias = get_alias(input.downcase)
 puts "Your new alias name below"
 puts new_alias
 # Ask if user want to reroll alias if they aren't satisfied with the produced one
-puts "Want to reroll alias? Type \"quit\" if you are satisfied with your alias"
+puts "Want to reroll Alias? Type \"quit\" if you are satisfied with your alias"
 response = gets.chomp.downcase
 
 # Create a loop to keep rerolling alias
@@ -100,7 +100,7 @@ until response == 'quit'
   new_alias = get_alias(new_alias.downcase)
   puts "Your new alias name below"
   puts new_alias
-  puts "Want to reroll alias? Type \"quit\" if you are satisfied with your alias"
+  puts "Want to reroll Alias? Type \"quit\" if you are satisfied with your alias"
   response = gets.chomp.downcase
 end
 
