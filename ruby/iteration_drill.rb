@@ -13,14 +13,11 @@ p zombie_apocalypse_supplies.join("*")
 # ----
 sorted_array = []
 zombie_apocalypse_supplies.each do |value|
-  index = zombie_apocalypse_supplies.index(value)
-  position_index = 0
-  new_index = 0
+  new_index, position_index  = 0, 0
   # Loop through array to count how many words come before it to find it's new index
   while position_index < zombie_apocalypse_supplies.size
     # If the value of the current position in the array is less than value, add 1 to new index
     if value.downcase > zombie_apocalypse_supplies[position_index].downcase
-     p value + " " + zombie_apocalypse_supplies[position_index]
      new_index += 1
     end
     position_index += 1
