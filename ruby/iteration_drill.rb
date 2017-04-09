@@ -11,22 +11,17 @@ p zombie_apocalypse_supplies.join("*")
 # 2. In order to keep yourself organized, sort your zombie_apocalypse_supplies
 # in alphabetical order. Do not use any special built-in methods.
 # ----
-sorted_array = []
-zombie_apocalypse_supplies.each do |value|
-  new_index, position_index  = 0, 0
-  # Loop through array to count how many words come before it to find it's new index
-  while position_index < zombie_apocalypse_supplies.size
-    # If the value of the current position in the array is less than value, add 1 to new index
-    if value.downcase > zombie_apocalypse_supplies[position_index].downcase
-     new_index += 1
+zombie_apocalypse_supplies.each do 
+  index = 0
+  while index < zombie_apocalypse_supplies.size - 1
+    if zombie_apocalypse_supplies[index].downcase > zombie_apocalypse_supplies[index+1].downcase
+     zombie_apocalypse_supplies[index], zombie_apocalypse_supplies[index+1] = zombie_apocalypse_supplies[index+1],zombie_apocalypse_supplies[index]
     end
-    position_index += 1
+    index += 1
   end
-  sorted_array[new_index] = value
 end
-zombie_apocalypse_supplies = sorted_array
-
 p zombie_apocalypse_supplies
+
 # ----
 # 3. Create a method to see if a particular item (string) is in the
 # zombie_apocalypse_supplies. Do not use any special built-in methods.
