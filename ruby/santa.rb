@@ -1,6 +1,10 @@
 # Santa Class
 class Santa
-  def initialize(ethnicity, gender)
+
+  attr_accessor :age, :list
+  attr_reader :ethnicity, :gender, :elf_count, :location, :reindeer_ranking, :sleigh_color
+
+  def initialize(gender, ethnicity)
     @age = 0
     @elf_count = 100
     @ethnicity = ethnicity
@@ -22,24 +26,7 @@ class Santa
       "Blitzen"
     ]
     @sleigh_color = "red"
-    puts "Hi, I'm Santa"
   end
-  
-  # Getter Methods 
-    def age
-      return @age
-    end
-    def ethnicity
-      return @ethnicity
-    end
-    def gender
-      return @gender
-    end
-  # Setter Methods
-  def gender=(new_gender)
-    @gender = new_gender
-  end
-  
   # Instance Methods
   def celebrate_birthday
     @age += 1
@@ -48,7 +35,9 @@ class Santa
   def eat_milk_and_cookies(cookie_type)
     puts "That was a good #{cookie_type}"
   end 
-  
+  def get_info
+    puts "Hi I'm a #{@gender}, #{@ethnicity} santa"
+  end  
   def get_mad_at(reindeer)
     index = reindeer_ranking.find_index(reindeer) 
     if index != nil
@@ -60,20 +49,31 @@ class Santa
   end
   
 end
+ethnicities = [
+  "Asian",
+  "Black/African",
+  "Hispanic",
+  "Middle Eastern",
+  "Mixed Race",
+  "Native American",
+  "Pacific Islander",
+  "White/Caucasian"
+]
+genders = [
+  "bigender",
+  "female",
+  "genderqueer",
+  "male",
+  "pangender",
+  "transgender"
+]
 santas = []
-santas << Santa.new("agender", "black")
-santas << Santa.new("female", "Latino")
-santas << Santa.new("bigender", "white")
-santas << Santa.new("male", "Japanese")
-santas << Santa.new("female", "prefer not to say")
-santas << Santa.new("gender fluid", "Mystical Creature (unicorn)")
-santas << Santa.new("N/A", "N/A")
-
-count = 0
+150.times do
+  gender = genders.sample
+  ethnicity = ethnicities.sample
+  santas << Santa.new(gender, ethnicity)
+end
 santas.each do |santa|
-  puts "Santa #{count}:" 
-  santa.speak
-  santa.eat_milk_and_cookies("chocolate chip")
-  count += 1
+  santa.get_info
 end
 
