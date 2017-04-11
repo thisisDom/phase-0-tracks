@@ -6,4 +6,5 @@ class Puppy
   end
 
 end
-
+bumper = Puppy.new
+bumper.fetch("ball")
