@@ -84,3 +84,11 @@ console.log(arrayMatch(array1, array2));
 console.log(randomArray(3));
 console.log(randomArray(8));
 console.log(randomArray(5));
+
+for(i = 0; i < 10; i++){
+  array_length = Math.floor(Math.random() * (10 - 1)) + 1;
+  array = randomArray(array_length);
+  console.log(array);
+  longest_element = longestString(array);
+  console.log(longest_element);
+}
