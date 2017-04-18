@@ -18,4 +18,5 @@ describe Hangman do
   it "gets the number of guesses left in the game" do
     expect(game.guesses_left).to include "guesses left"
   end
+  
 end

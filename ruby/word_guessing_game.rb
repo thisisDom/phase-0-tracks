@@ -33,6 +33,7 @@ class Hangman
     ]
     @display_puzzle_word = []
     @game_winner = nil
+    @game_status = nil
     @guessed_letter = []
 
     @guess_word = @game_dictionary.sample
@@ -42,9 +43,6 @@ class Hangman
     @guess_word_letters.each do
       @display_puzzle_word << "?"
     end
-    puts "It's time to play a game"
-    puts "Try to see if you can guess the letter I'm thinking of"
-    self.word_status
   end
   # Create a method to see if games over
   def game_over
@@ -87,6 +85,7 @@ class Hangman
     if letter_count == 0
       @guess_limit -= 1
     end
+    return letter
   end
   # Create a method that returns the state of the word
   def word_status
