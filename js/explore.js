@@ -7,7 +7,7 @@ function reverseString(string){
   // create an blank array that is the same length as the string
   var reverse_array = new Array(string_length);
   // create a loop that iterates through each letter of the original string
-    for( i = 0; i < string.length; i++){
+    for( i = 0; i < string.length; i++ ){
     // create an equation that finds the new position of the letter in the blank array
       // should be the (strings length-1) - current index
       var current_index = string[i];
@@ -21,7 +21,7 @@ function reverseString(string){
   return returned_string;  
 }
 var x = 1;
-if( x == 1){
+if( x == 1 ){
   console.log(reverseString("hello"));
 }
 
