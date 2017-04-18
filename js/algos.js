@@ -1,4 +1,5 @@
 // Function that returns the longest string from an array
+// function should take 1 parameter
 function longestString(arr){
   // create a variable called longest string and store nothing in it
   var longest_string = "";
@@ -13,4 +14,28 @@ function longestString(arr){
   //return longest string
   return longest_string;
 }
-longestString(["long phrase","longest phrase","longer phrase"]);
+
+// Function that searches two arrays and sees if the same key-pair appears in both arrays
+// function should take 2 parameters
+function arrayMatch(array1, array2){
+// create the variable "match", setting its default value to false
+var match = false;
+// iterate through each element of array 1 
+array.forEach(function(value, key){
+// create a conditional to check if the same key is in both arrays
+  if(array2[key]){
+  // if so, check to see if the value for both keys is the same
+    if(array2[key] == array1[key]){
+    // if so, change value of "match" to true
+      match = true;
+    }
+  }
+});
+// return variable "match"
+return match;
+}
+
+
+console.log(longestString(["long phrase","longest phrase","longer phrase"]));
+console.log(longestString(["steve","dan","jasper"]));
+console.log(longestString(["michael","jordy","dominique"]));
