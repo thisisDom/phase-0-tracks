@@ -41,6 +41,20 @@ function arrayMatch(array1, array2){
   return match;
 }
 
+// Function that creates an Array of a random length and fills it with string between 1 letter and 10 letters
+// function should take 1 parameter, the length of the array
+
+  // create a variable "alphabet", a string containing each letter of the alphabet
+  // create a variable "new_array", with a length of the parameter
+  // create a loop that iterates through each value of array
+    // create a variable "new_word", with the value of an empty string ("");
+    // create a variable "word_length" that randomly select a number between 1-10
+    // create a loop that loops the value of world length times
+      // create a variable "alphabet_index" that stores a random number between 0 and the length of the alphabet - 1(25)
+      // select the random index of alphabet and add it to the end of new_word
+    // store new word in the new_array
+  // return new_array 
+
 console.log(longestString(["long phrase","longest phrase","longer phrase"]));
 console.log(longestString(["steve","dan","jasper"]));
 console.log(longestString(["michael","jordy","dominique"]));
