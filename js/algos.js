@@ -78,7 +78,7 @@ console.log(longestString(["michael","jordy","dominique"]));
 // Release 1 Driver Code
 var array1 = {name: "dou", age: 54, junk: '2'};
 var array2 = {name: "doug", age: 534, junk: 2}
-arrayMatch(array1, array2);
+console.log(arrayMatch(array1, array2));
 
 // Release 2 Driver Code
 console.log(randomArray(3));
