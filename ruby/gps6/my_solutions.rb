@@ -16,6 +16,7 @@ class VirusPredictor
     @population_density = population_density
   end
 
+  #  calling the methods to get the predict deaths and the spread of the virus
   def virus_effects
     predicted_deaths(@population_density, @population, @state)
     speed_of_spread(@population_density, @state)
@@ -23,6 +24,7 @@ class VirusPredictor
 
   private
 
+  # prints the predicted deaths for a state based on it's population density and size
   def predicted_deaths(population_density, population, state)
     # predicted deaths is solely based on population density
     if @population_density >= 200
@@ -41,6 +43,7 @@ class VirusPredictor
 
   end
 
+  # prints how fast the virus with spread within a state
   def speed_of_spread(population_density, state) #in months
     # We are still perfecting our formula here. The speed is also affected
     # by additional factors we haven't added into this functionality.
