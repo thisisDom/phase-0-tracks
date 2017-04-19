@@ -39,7 +39,7 @@ class VirusPredictor
       death_factor = 0.05
     end
       number_of_deaths = (@population * death_factor).floor
-      
+
     print "#{@state} will lose #{number_of_deaths} people in this outbreak"
 
   end
@@ -93,3 +93,20 @@ STATE_DATA.each do |state_name, population_info|
   state.virus_effects
 
 end
+=begin
+
+What are the differences between the two different hash syntaxes shown in the state_data file?
+  The two different hash syntaxes the use of both a string and a symbol as keys. Also how the values assignment was different. The string uses
+  the hashrocket, where as the symbol uses a colon.
+What does require_relative do? How is it different from require?
+  It's used to insert the code from another file into this file, relative to the location of this file.
+  It's different in that require is used to add something that is already pathed in ruby, typically Ruby class, modules, libraries, etc. that aren't commonly used.
+What are some ways to iterate through a hash?
+  Iterate through a hash using a loop or the method each followed by a block.
+When refactoring virus_effects, what stood out to you about the variables, if anything?
+  The variables being passed as arguments in the methods called in virus_effects were instance_variables and 
+  don't needed to be passed because they can be directly accessed within the those methods
+What concept did you most solidify in this challenge?
+  I feel I most solidified refactoring and that refactoring is used for more than just condensing lines of codes.
+
+=end
