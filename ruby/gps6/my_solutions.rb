@@ -4,8 +4,8 @@
 # We spent [#] hours on this challenge.
 
 # EXPLANATION OF require_relative
-#
-#
+# used to insert the code from another file into this file, relative to the location of this file.
+# require is used to add something that is already pathed in ruby, typically Ruby class, modules, libraries, etc. that aren't commonly used.
 require_relative 'state_data'
 
 class VirusPredictor
