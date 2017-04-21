@@ -6,3 +6,14 @@ horse_names.push("Ruffian");
 
 console.log(horse_colors);
 console.log(horse_names);
+
+// conditional to check if both arrays are the same length
+if(horse_colors.length == horse_names.length){
+  //create an empty object
+  var horses = {};
+  //create a loop that iterates through both arrays
+  for( i = 0; i < horse_colors.length; i++){
+    horses[horse_names[i]] = horse_colors[i];
+  }
+  console.log(horses);
+}
