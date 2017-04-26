@@ -77,7 +77,7 @@ class Hangman
     letter_count = 0
     letter_index = 0
     @guess_word_letters.each do |guess_word_letter|
-      if  guess_word_letter == letter
+      if guess_word_letter == letter
         #replace question marks in display word with correct letter
         @display_word[letter_index] = letter
         letter_count += 1
