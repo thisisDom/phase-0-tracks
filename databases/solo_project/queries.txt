@@ -1,0 +1,43 @@
+1. "SELECT * FROM cards";
+  Output:
+    1|Nord Firebrand|Nord|Strength|0|Common|Charge
+    2|Intimidate|Action|Strength|1|Rare|Enemy creatures lose Guard.
+    3|Twilight Werebat|Wood Elf|Agility|4|Epic|Prophecy
+    4|Quin'rawl Skulker|Khajit|Agility|6|Legendary|Pilfer"+4/+4
+
+2. "UPDATE cards SET card_type = "Willpower" WHERE card_cost = 4";
+  Output: N/A
+
+3. "SELECT * FROM cards, creature_cards WHERE card.card_id = creature_cards.card_id";
+  Output:
+    4|Quin'rawl Skulker|Khajit|Agility|6|Legendary|Pilfer"+4/+4|1|4|4|4|FALSE
+    1|Nord Firebrand|Nord|Strength|0|Common|Charge|2|1|1|1|FALSE
+    3|Twilight Werebat|Wood Elf|Agility|4|Epic|Prophecy|3|3|4|2|FALSE
+
+4. "SELECT cards.card_id, cards.card_name, creature_cards.attack_damage, creature_cards.health FROM cards, creature_cards WHERE card.card_id = creature_cards.card_id";
+  Output:
+    4|Quin'rawl Skulker|4|4
+    1|Nord Firebrand|1|1
+    3|Twilight Werebat|4|2
+
+5. "DELECT FROM cards WHERE card_type = "Action";
+  Output: N/A
+
+RELEASE 3
+
+"SELECT * FROM cards INNER JOIN creature_cards ON creature_cards.card_id = cards.card_id";
+  Output:
+    4|Quin'rawl Skulker|Khajit|Agility|6|Legendary|Pilfer"+4/+4|1|4|4|4|FALSE
+    1|Nord Firebrand|Nord|Strength|0|Common|Charge|2|1|1|1|FALSE
+    3|Twilight Werebat|Wood Elf|Agility|4|Epic|Prophecy|3|3|4|2|FALSE
+
+"SELECT * FROM cards LEFT JOIN creature_cards ON creature_cards.card_id = cards.card_id";
+Output:
+  4|Quin'rawl Skulker|Khajit|Agility|6|Legendary|Pilfer"+4/+4|1|4|4|4|FALSE
+  1|Nord Firebrand|Nord|Strength|0|Common|Charge|2|1|1|1|FALSE
+  3|Twilight Werebat|Wood Elf|Agility|4|Epic|Prophecy|3|3|4|2|FALSE
+  5|Imperial Bard|Action|Willpower|3|Common|Prophecy. Gives Guard to a creature.|||||
+
+"SELECT * FROM cards RIGHT JOIN creature_cards ON creature_cards.card_id = cards.card_id";
+Output:
+  Error: RIGHT and FULL OUTER JOINs are not currently supported
