@@ -1,0 +1,12 @@
+1. SELECT * FROM businesses INNER JOIN reviews ON businesses.business_id = reviews.business_id INNER JOIN users on reviews.user_id = users.user_id;
+  3|The Beagle Nightclub|1|4|The service was great.|3|2|2|Angela|Jolie
+  2|Amir's Towing|2|3|They charge an arm and a leg.|2|1|1|Bradford|Pitt
+  1|Grundy Hollow Wedding Chapel|3|5|I've been to 3 weddings here and they all were great.|1|4|4|Merryl|Streepman
+
+2. SELECT users.first_name, users.last_name, reviews.stars, reviews.comment, businesses.business_name FROM businesses INNER JOIN reviews ON businesses.business_id = reviews.business_id INNER JOIN users on reviews.user_id = users.user_id;
+  Angela|Jolie|4|The service was great.|The Beagle Nightclub
+  Bradford|Pitt|3|They charge an arm and a leg.|Amir's Towing
+  Merryl|Streepman|5|I've been to 3 weddings here and they all were great.|Grundy Hollow Wedding Chapel
+
+3. SELECT users.first_name, users.last_name, reviews.stars, reviews.comment, businesses.business_name FROM businesses INNER JOIN reviews ON businesses.business_id = reviews.business_id INNER JOIN users on reviews.user_id = users.user_id WHERE businesses.business_name = "Amir's Towing";
+  Bradford|Pitt|3|They charge an arm and a leg.|Amir's Towing3
