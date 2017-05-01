@@ -25,7 +25,6 @@ create_updates_table = <<-SQL
     update_id INTEGER PRIMARY KEY AUTOINCREMENT,
     user_id INTEGER NOT NULL,
     update_text VARCHAR(255) NOT NULL,
-    update_media VARCHAR(255),
     update_datetime DATETIME,
     FOREIGN KEY (user_id) REFERENCES users(user_id)
   )
