@@ -10,8 +10,8 @@ database.results_as_hash = true
 
 # create method for creating a new update post
 
-def create_new_update(database, user_id, text )
-  database.execute("INSERT INTO updates (user_id, update_text, update_datetime) VALUES (?, ?, NOW())", [user_id, update_text])
+def create_new_update(database, user_id, update_text)
+  database.execute("INSERT INTO updates (user_id, update_text, update_datetime) VALUES (?, ?, date('now'))", [user_id, update_text])
 end
 # Select all the users from users database
 users = database.execute("SELECT * FROM users")
@@ -21,5 +21,5 @@ users_size = users.length
 50.times do 
   # select to 
   user_id = users[Random.rand(users_size - 1)]['user_id']
-  create_new_update(database, user_id, Faker::Twitter.status(include_user: false))
+  create_new_update(database, user_id, Faker::Friends.quote.to_s)
 end
