@@ -62,3 +62,8 @@ get '/greatjob' do
     "Good job!"
   end
 end
+
+get '/add/:num1+:num2' do
+  response = params[:num1].to_i + params[:num2].to_i
+  "#{response}"
+end
