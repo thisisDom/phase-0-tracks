@@ -48,10 +48,17 @@ end
 
 # A /contact route that displays an address (you can make up the address).
 
-
 get '/contact' do
   response = ""
   response << "<h3>123 Main Street Ave.</h3>"
   response << "<h3>San Jose, Ca 95445</h3>"
   response
+end
+
+get '/greatjob' do
+  if params[:name]
+    "Good job, #{params[:name]}!"
+  else
+    "Good job!"
+  end
 end
