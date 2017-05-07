@@ -1,5 +1,6 @@
 # require gems
 require 'sinatra'
+require "sinatra/reloader" if development?
 require 'sqlite3'
 
 set :public_folder, File.dirname(__FILE__) + '/static'
@@ -24,4 +25,12 @@ post '/students' do
   redirect '/'
 end
 
+get '/students/:campus' do
+  query = <<-SQL
+    SELECT * FROM students WHERE LOWER(campus)=LOWER("#{params[:campus]}")
+  SQL
+  @students = db.execute(query)
+  @campus = params[:campus]
+  erb :students
+end
 # add static resources
