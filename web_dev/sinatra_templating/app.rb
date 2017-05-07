@@ -32,5 +32,18 @@ get '/students/:campus' do
   @students = db.execute(query)
   @campus = params[:campus]
   erb :students
+end 
+
+get '/campus/update' do
+  erb :new_campus
+end
+
+post "/update/campus" do
+  query = <<-SQL
+    UPDATE students SET campus="#{params['campus']}" WHERE LOWER(name)=LOWER("#{params['name']}")
+  SQL
+  db.execute(query)
+  campus = params['campus']
+  redirect "/students/#{campus}"
 end
 # add static resources
